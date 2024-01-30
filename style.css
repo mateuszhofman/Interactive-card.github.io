@@ -369,8 +369,7 @@ section input:focus {
   }
   .info-box {
     width: 66.5%;
-    padding-left: 350px;
-    padding-right: 230px;
+    padding: 20px 230px 45px 350px;
   }
   .info-box label {
     font-size: 12px;
