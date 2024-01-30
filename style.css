@@ -31,7 +31,7 @@ section input:focus {
   color: var(--White);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/Interactive Card/img/bg-main-mobile.png");
+  background-image: url("./img/bg-main-mobile.png");
 }
 .cards-box .card-front {
   position: absolute;
@@ -42,7 +42,7 @@ section input:focus {
   width: 76%;
   border-radius: 8px;
   background-size: cover;
-  background-image: url("/Interactive Card/img/bg-card-front.png");
+  background-image: url("./img/bg-card-front.png");
 }
 .cards-box .card-front .card-logo img {
   height: 25px;
@@ -77,7 +77,7 @@ section input:focus {
   height: 68%;
   border-radius: 8px;
   background-size: cover;
-  background-image: url("/Interactive Card/img/bg-card-back.png");
+  background-image: url("./img/bg-card-back.png");
 }
 .cards-box .card-back .cvc-number {
   position: absolute;
@@ -261,7 +261,7 @@ section input:focus {
     background-position: center;
     height: 100%;
     width: 32%;
-    background-image: url("/Interactive Card/img/bg-main-desktop.png");
+    background-image: url("./img/bg-main-desktop.png");
   }
   .cards-box .card-back,
   .cards-box .card-front {
