@@ -1,0 +1,400 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Linear-gradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+section input:focus {
+  outline: 1px solid hsl(278, 94%, 30%);
+}
+
+.cards-box {
+  position: relative;
+  height: 35%;
+  color: var(--White);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/Interactive Card/img/bg-main-mobile.png");
+}
+.cards-box .card-front {
+  position: absolute;
+  bottom: -45px;
+  left: 15px;
+  padding: 20px;
+  height: 68%;
+  width: 76%;
+  border-radius: 8px;
+  background-size: cover;
+  background-image: url("/Interactive Card/img/bg-card-front.png");
+}
+.cards-box .card-front .card-logo img {
+  height: 25px;
+}
+.cards-box .card-front .card-info {
+  display: flex;
+  flex-direction: column;
+}
+.cards-box .card-front .card-info .card-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.cards-box .card-front .card-info .card-number {
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.cards-box .card-front .card-info .name,
+.cards-box .card-front .card-info .date {
+  margin-top: 18px;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cards-box .card-back {
+  position: absolute;
+  right: 15px;
+  top: 32px;
+  width: 76%;
+  height: 68%;
+  border-radius: 8px;
+  background-size: cover;
+  background-image: url("/Interactive Card/img/bg-card-back.png");
+}
+.cards-box .card-back .cvc-number {
+  position: absolute;
+  top: 49%;
+  right: 35px;
+  transform: translateY(-49%);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 25px 45px 25px;
+}
+.info-box label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-wrap: nowrap;
+}
+.info-box input {
+  padding: 10px 15px;
+  margin-top: 8px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid var(--Light-grayish-violet);
+  font-family: inherit;
+}
+.info-box input::-moz-placeholder {
+  color: var(--Light-grayish-violet);
+  font-weight: 500;
+}
+.info-box input::placeholder {
+  color: var(--Light-grayish-violet);
+  font-weight: 500;
+}
+.info-box .info-date {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.info-box .info-date .date-box {
+  width: 90%;
+}
+.info-box .info-date .date-box .date-inputs {
+  display: flex;
+  gap: 8px;
+}
+.info-box .info-date .date-box .date-inputs .month-input,
+.info-box .info-date .date-box .date-inputs .year-input {
+  width: 50%;
+}
+.info-box .info-date .cvc-input {
+  width: 100%;
+}
+.info-box .info-name,
+.info-box .info-card {
+  display: flex;
+  flex-direction: column;
+}
+.info-box .confirm-btn {
+  width: 100%;
+  margin-top: 28px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  color: var(--White);
+  background-color: var(--Very-dark-violet);
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.info-box .confirm-btn:hover {
+  background-color: hsl(278, 74%, 17%);
+}
+.info-box .error-text {
+  display: none;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--Red);
+}
+.info-box .error {
+  outline: 1px solid var(--Red);
+}
+
+.popup {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  margin-top: 55px;
+}
+.popup h1 {
+  margin-top: 30px;
+  font-size: 28px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.popup p {
+  margin-top: 15px;
+  font-size: 18.2px;
+  font-weight: 500;
+  color: var(--Dark-grayish-violet);
+}
+.popup .continue-btn {
+  width: 100%;
+  margin-top: 35px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  color: var(--White);
+  background-color: var(--Very-dark-violet);
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.popup .continue-btn:hover {
+  background-color: hsl(278, 74%, 17%);
+}
+
+@media (min-width: 375px) {
+  .cards-box .card-front .card-logo img {
+    height: 30px;
+  }
+  .cards-box .card-front .card-info .card-number {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  .cards-box .card-front .card-info .name,
+  .cards-box .card-front .card-info .date {
+    font-size: 9.5px;
+  }
+  .cards-box .card-back {
+    top: 30px;
+  }
+  .popup img {
+    margin-top: 12px;
+  }
+  .popup h1 {
+    margin-top: 35px;
+  }
+  .popup .continue-btn {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 414px) {
+  .card-front .card-info .card-item .name,
+  .card-front .card-info .card-item .date {
+    margin-top: 35px;
+  }
+}
+@media (min-width: 430px) {
+  .cards-box .card-back,
+  .cards-box .card-front {
+    height: 55%;
+    width: 78%;
+  }
+  .cards-box .card-back {
+    margin-top: 35px;
+  }
+  .cards-box .card-back .cvc-number {
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .cards-box {
+    background-position: center;
+    height: 100%;
+    width: 32%;
+    background-image: url("/Interactive Card/img/bg-main-desktop.png");
+  }
+  .cards-box .card-back,
+  .cards-box .card-front {
+    height: 164px;
+    width: 300px;
+  }
+  .cards-box .card-back {
+    top: 51%;
+    right: -130px;
+  }
+  .cards-box .card-front {
+    top: 32%;
+    left: auto;
+    right: -80px;
+  }
+  .cards-box .card-front .card-info .card-number {
+    font-size: 19px;
+    margin-top: 35px;
+  }
+  .cards-box .card-front .card-info .name,
+  .cards-box .card-front .card-info .date {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  .info-box {
+    width: 68%;
+    padding-left: 200px;
+    padding-right: 70px;
+  }
+  .info-box label {
+    font-size: 8px;
+  }
+  .info-box input {
+    padding: 6px 15px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .info-box .confirm-btn {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .popup {
+    margin-left: 20%;
+  }
+  .popup .continue-btn {
+    width: 120%;
+  }
+}
+@media (min-width: 1024px) {
+  .cards-box .card-back {
+    top: 49%;
+  }
+  .cards-box .card-front {
+    top: 35%;
+  }
+  .popup {
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1440px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .cards-box {
+    width: 33.5%;
+  }
+  .cards-box .card-back,
+  .cards-box .card-front {
+    height: 246px;
+    width: 445px;
+  }
+  .cards-box .card-back {
+    top: 48%;
+    right: -222px;
+    box-shadow: 9px 30px 28px -6px rgba(18, 17, 0, 0.16);
+  }
+  .cards-box .card-back .cvc-number {
+    position: absolute;
+    top: 49%;
+    transform: translateY(-49%);
+    font-size: 14px;
+    right: 60px;
+    letter-spacing: 2px;
+  }
+  .cards-box .card-front {
+    padding: 30px 32px;
+    top: 20.5%;
+    right: -128px;
+    box-shadow: 9px 30px 28px -6px rgba(18, 17, 0, 0.16);
+  }
+  .cards-box .card-front .card-logo img {
+    height: 50px;
+  }
+  .cards-box .card-front .card-info .card-number {
+    font-size: 30px;
+    margin-top: 57px;
+  }
+  .cards-box .card-front .card-info .name,
+  .cards-box .card-front .card-info .date {
+    margin-top: 25px;
+    font-size: 13.6px;
+    letter-spacing: 2px;
+  }
+  .info-box {
+    width: 66.5%;
+    padding-left: 350px;
+    padding-right: 230px;
+  }
+  .info-box label {
+    font-size: 12px;
+    margin-top: 25px;
+  }
+  .info-box input {
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 100%;
+  }
+  .info-box .info-date {
+    margin-top: 18px;
+  }
+  .info-box .confirm-btn {
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .popup {
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-left: 26.5%;
+  }
+  .popup .continue-btn {
+    width: 143%;
+  }
+}/*# sourceMappingURL=style.css.map */
