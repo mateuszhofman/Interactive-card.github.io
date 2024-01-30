@@ -31,7 +31,7 @@ section {
 	color: var(--White);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url('/Interactive Card/img/bg-main-mobile.png');
+	background-image: url('./img/bg-main-mobile.png');
 
 	.card-front {
 		position: absolute;
@@ -42,7 +42,7 @@ section {
 		width: 76%;
 		border-radius: 8px;
 		background-size: cover;
-		background-image: url('/Interactive Card/img/bg-card-front.png');
+		background-image: url('./img/bg-card-front.png');
 		.card-logo {
 			img {
 				height: 25px;
@@ -80,7 +80,7 @@ section {
 		height: 68%;
 		border-radius: 8px;
 		background-size: cover;
-		background-image: url('/Interactive Card/img/bg-card-back.png');
+		background-image: url('./img/bg-card-back.png');
 		.cvc-number {
 			position: absolute;
 			top: 49%;
@@ -289,7 +289,7 @@ section {
 		background-position: center;
 		height: 100%;
 		width: 32%;
-		background-image: url('/Interactive Card/img/bg-main-desktop.png');
+		background-image: url('./img/bg-main-desktop.png');
 
 		.card-back,
 		.card-front {
